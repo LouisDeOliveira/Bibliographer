@@ -1,0 +1,16 @@
+[project]
+name = "bibliographer"
+version = "0.1.0"
+description = "Autonomous academic literature review agent — PhD workshop"
+requires-python = ">=3.11"
+dependencies = [
+    "huggingface_hub>=0.24.0",   # HuggingFace Inference API
+    "litellm>=1.40.0",           # Optional: unified LLM gateway (OpenAI, Anthropic, Groq, Ollama…)
+    "requests>=2.31.0",          # HTTP calls for the academic API tools (day2)
+    "python-dotenv>=1.0.0",      # Auto-load .env credentials
+]
+
+[tool.uv]
+# uv resolves and locks dependencies in uv.lock automatically.
+# Standard library only otherwise — no LangChain, no frameworks.
+# json, os, time, hashlib, unicodedata, re — all built-in.
